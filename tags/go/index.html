@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Categories</title>
-  <meta property="og:title" content="Categories" />
-  <meta name="twitter:title" content="Categories" />
+  <title>Go</title>
+  <meta property="og:title" content="Go" />
+  <meta name="twitter:title" content="Go" />
   <meta name="author" content="Ricardo Aravena"/>
   <link href='https://raravena80.github.io/img/favicon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
@@ -15,12 +15,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
-  <meta property="og:url" content="https://raravena80.github.io/categories/" />
+  <meta property="og:url" content="https://raravena80.github.io/tags/go/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rico&#39;s Blog" />
 
   <meta name="generator" content="Hugo 0.20.5" />
-  <link rel="canonical" href="https://raravena80.github.io/categories/" />
+  <link rel="canonical" href="https://raravena80.github.io/tags/go/" />
   <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -90,26 +90,14 @@
 
 
     
-  
-  
-  
-
-
-
-
-  
-
   <header class="header-section ">
-    
     <div class="intro-header no-img">
-      
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="page-heading">
-              <h1>Categories</h1>
-                
-                
+              <h1>#Go</h1>
+              <hr class="small">
             </div>
           </div>
         </div>
@@ -117,60 +105,49 @@
     </div>
   </header>
 
-
     
-  
   <div class="container" role="main">
-    <article class="post-preview">
-      <div class="list-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
-      
-      <a href="/categories/docker" class="list-group-item">
-          docker<span class="badge">3</span></a>
-      
-      <a href="/categories/ansible" class="list-group-item">
-          ansible<span class="badge">2</span></a>
-      
-      <a href="/categories/haproxy" class="list-group-item">
-          haproxy<span class="badge">2</span></a>
-      
-      <a href="/categories/json" class="list-group-item">
-          json<span class="badge">2</span></a>
-      
-      <a href="/categories/aws" class="list-group-item">
-          aws<span class="badge">1</span></a>
-      
-      <a href="/categories/chromebook" class="list-group-item">
-          chromebook<span class="badge">1</span></a>
-      
-      <a href="/categories/cloudformation" class="list-group-item">
-          cloudformation<span class="badge">1</span></a>
-      
-      <a href="/categories/gjson" class="list-group-item">
-          gjson<span class="badge">1</span></a>
-      
-      <a href="/categories/go" class="list-group-item">
-          go<span class="badge">1</span></a>
-      
-      <a href="/categories/kernel" class="list-group-item">
-          kernel<span class="badge">1</span></a>
-      
-      <a href="/categories/linux" class="list-group-item">
-          linux<span class="badge">1</span></a>
-      
-      <a href="/categories/logging" class="list-group-item">
-          logging<span class="badge">1</span></a>
-      
-      <a href="/categories/lxc" class="list-group-item">
-          lxc<span class="badge">1</span></a>
-      
-      <a href="/categories/papertrailapp" class="list-group-item">
-          papertrailapp<span class="badge">1</span></a>
-      
-      <a href="/categories/scout" class="list-group-item">
-          scout<span class="badge">1</span></a>
-      
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/">
+                <h2 class="post-title">Parsing Deeply Nested JSON in Go</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on April 28, 2017
+              </p>
+              <div class="post-entry">
+                
+                  Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&rsquo;s pretty straight forward running some like this in Python j = json.load(jsonstring) or in Ruby j = JSON.load(jsonstring).
+In go generally you have to prefine your structs and run through an Unmarshal function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it.
+                  <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/json">json</a>&nbsp;
+                  
+                    #<a href="/tags/gjson">gjson</a>&nbsp;
+                  
+                    #<a href="/tags/go">go</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+        </div>
+        
       </div>
-    </article>
+    </div>
   </div>
 
     <footer>
