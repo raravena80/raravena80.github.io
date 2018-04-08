@@ -135,9 +135,9 @@
       <article role="main" class="blog-post">
         <p>The Kata community has been busy getting the first release out the door.</p>
 
-<p>Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. They go even further by some vendors like VMware take this step even further by providing things like storage VMotion.</p>
+<p>Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.</p>
 
-<p>With that, I set about running a two node ScyllaDB cluster in Kata containers and running some simple benchmarks. If you are not familiar with Scylla, it&rsquo;s a high-performance Cassandra clone written from scratch in C++. The folks that started ScyllaDB are the same folks that started the KVM project that eventually made it into the Linux Kernel.</p>
+<p>With that, I set about running a two node ScyllaDB cluster in Kata containers and running some simple benchmarks. Scylla is a high-performance Cassandra clone written from scratch in C++. The folks that started ScyllaDB are the same folks that started the KVM project that eventually made it into the Linux Kernel.</p>
 
 <p>I used a single C2S bare metal machine from <a href="https://www.scaleway.com">ScaleWay</a></p>
 
@@ -161,11 +161,11 @@
 path = &quot;/usr/bin/qemu-lite-system-x86_64&quot;
 </code></pre>
 
-<p>Then I ran some performance benchmarks that were previously run with Scylla by the IBM folks. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are just simply to establish a baseline and demonstrate that we can run Scylla in Kata containers. The idea is to get some baseline and see how Scylla performs in Kata.</p>
+<p>Then I ran some performance benchmarks that were previously run with Scylla by the IBM folks. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata containers. The idea is to get some baseline and see how Scylla performs in Kata.</p>
 
 <p>You can read more about the IBM tests <a href="https://www.ibm.com/developerworks/library/l-performance-scylla/">here</a></p>
 
-<p>In this case, each node is running in its own Kata container (running in separate qemu-lite VMs). I followed some of the instructions in the <a href="https://hub.docker.com/r/scylladb/scylla/">docker hub scylla page to setup my cluster</a>. I just provided the <code>--runtime kata-runtime</code> parameter for each container and the <code>-p 9042:9042</code> parameter so that I could connect to Scylla from my bare-metal machine.</p>
+<p>In this case, each node is running in its Kata container (running in separate qemu-lite VMs). I followed some of the instructions in the <a href="https://hub.docker.com/r/scylladb/scylla/">docker hub Scylla page to setup my cluster</a>. I just provided the <code>--runtime kata-runtime</code> parameter for each container and the <code>-p 9042:9042</code> parameter so that I could connect to Scylla from my bare-metal machine.</p>
 
 <p>My commands:</p>
 
@@ -293,7 +293,7 @@ Total operation time      : 00:05:55
 
 <p>Read performance overall is slower in both cases since Scylla was not started with any tuning and both nodes are running on the same machine. What is more interesting is that the read performance is slower for Kata by a higher percentage than writes. I can&rsquo;t make a definitive conclusion on why this is the case, but I guess is that the I/O between the client and the VM is going through the kata-shim which is adding extra overhead.</p>
 
-<p>I expect these numbers to get better as the Kata team continues to tune the qemu parameters and establishes best practices for Kata containers as well as some of the vendors making it easier to improve performance and security such as Intel and AMD. For example, in real-world applications you would make sure that your VM is talking directly to the hardware and in most cases, you would want to run your Scylla nodes on separate metal.</p>
+<p>I expect these numbers to get better as the Kata team continues to tune the qemu parameters and establishes best practices for Kata containers as well as some of the vendors making it easier to improve performance and security such as Intel and AMD. For example, in real-world applications, you would make sure that your VM is talking directly to the hardware and in most cases, you would want to run your Scylla nodes on separate metal.</p>
 
 <p>Due to privacy concerns, compliance requirements such as <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>, and bugs such as <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a> and <a href="https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)">Meltdown</a>, more organizations will continue to adopt running containers in a secure way.  Although we are very early in the Kata project, I&rsquo;m pretty excited about its ability to run reliable and secure workloads. The performance will only get better with support for more applications with different types of memory, storage and networking requirements. Also, as the team continues to add resources we&rsquo;ll be doing more benchmarks with hardware and more machines in different cluster configurations, so stay tuned.</p>
 
