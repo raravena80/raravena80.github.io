@@ -531,55 +531,38 @@ html.theme-dark {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 
-/* Ensure Disqus takes full width */
-.disqus-comments,
-.disqus-comments *,
-.disqus-comments iframe,
-#disqus_thread,
+/* Simple Disqus iframe width fix */
 #disqus_thread iframe {
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 1px !important;
   min-width: 100% !important;
-  box-sizing: border-box !important;
 }
 
-/* Force iframe to expand */
-#disqus_thread iframe {
-  min-height: 400px !important;
-}
-
-/* Remove any margin/padding constraints */
-.disqus-comments .comments,
-.disqus-comments #disqus_thread {
-  margin: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-}
-
-/* Dark mode - force dark background throughout */
+/* Dark mode container with CSS filter approach since official API isn't working */
 [data-theme="dark"] .disqus-comments,
-[data-theme="dark"] .disqus-comments *,
-[data-theme="dark"] #disqus_thread,
-[data-theme="dark"] .comments,
-.theme-dark .disqus-comments,
-.theme-dark .disqus-comments *,
-.theme-dark #disqus_thread,
-.theme-dark .comments {
+.theme-dark .disqus-comments {
   background-color: #2d3748 !important;
-  color: #e2e8f0 !important;
+  filter: invert(1) hue-rotate(180deg) !important;
 }
 
-/* Light mode styling */
+/* Counter-invert the container to restore normal appearance but keep inverted iframe content */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
+  filter: none !important;
+}
+
+[data-theme="dark"] #disqus_thread,
+.theme-dark #disqus_thread {
+  filter: invert(1) hue-rotate(180deg) !important;
+  background-color: #2d3748 !important;
+}
+
+/* Light mode - no filters needed */
 [data-theme="light"] .disqus-comments,
-[data-theme="light"] .disqus-comments *,
 [data-theme="light"] #disqus_thread,
-[data-theme="light"] .comments,
 .theme-light .disqus-comments,
-.theme-light .disqus-comments *,
-.theme-light #disqus_thread,
-.theme-light .comments {
+.theme-light #disqus_thread {
+  filter: none !important;
   background-color: #f8f9fa !important;
-  color: #333333 !important;
 }
 
 /* Light mode pager styling */
