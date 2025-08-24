@@ -515,20 +515,11 @@ html.theme-dark {
   }
 }
 
-/* Dark mode styling for Disqus container */
-[data-theme="dark"] .disqus-comments,
-.theme-dark .disqus-comments {
-  background-color: #2d3748 !important;
-  border: 1px solid #4a5568 !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
-}
-
-/* Light mode styling for Disqus container */
-[data-theme="light"] .disqus-comments,
-.theme-light .disqus-comments {
-  background-color: #f8f9fa !important;
-  border: 1px solid #e9ecef !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+/* Simplified Disqus styling - no external padding, no filters */
+.disqus-comments {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 /* Simple Disqus iframe width fix */
@@ -537,42 +528,9 @@ html.theme-dark {
   min-width: 100% !important;
 }
 
-/* Dark mode container with CSS filter approach since official API isn't working */
-[data-theme="dark"] .disqus-comments,
-.theme-dark .disqus-comments {
-  background-color: #2d3748 !important;
-  filter: invert(1) hue-rotate(180deg) !important;
-}
-
-/* Counter-invert the container to restore normal appearance but keep inverted iframe content */
-[data-theme="dark"] .disqus-comments,
-.theme-dark .disqus-comments {
-  filter: none !important;
-}
-
-[data-theme="dark"] #disqus_thread,
-.theme-dark #disqus_thread {
-  filter: invert(1) hue-rotate(180deg) !important;
-  background-color: #2d3748 !important;
-  padding: 30px !important;
-  margin: 20px !important;
-  border-radius: 8px !important;
-}
-
-/* Light mode - no filters needed */
-[data-theme="light"] .disqus-comments,
-[data-theme="light"] #disqus_thread,
-.theme-light .disqus-comments,
-.theme-light #disqus_thread {
-  filter: none !important;
-  background-color: #f8f9fa !important;
-}
-
-[data-theme="light"] #disqus_thread,
-.theme-light #disqus_thread {
-  padding: 30px !important;
-  margin: 20px !important;
-  border-radius: 8px !important;
+/* Let Disqus handle its own styling and spacing */
+#disqus_thread {
+  background: transparent !important;
 }
 
 /* Light mode pager styling */
