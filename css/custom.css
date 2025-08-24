@@ -565,7 +565,8 @@ html.theme-dark {
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
   filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
-  background: #1a1a1a !important;
+  background: rgb(26, 26, 26) !important;
+  background-color: rgb(26, 26, 26) !important;
 }
 
 /* Force dark background for all Disqus elements in dark mode */
@@ -573,18 +574,18 @@ html.theme-dark {
 [data-theme="dark"] .disqus-comments,
 .theme-dark #disqus_thread,
 .theme-dark .disqus-comments {
-  background: #1a1a1a !important;
-  background-color: #1a1a1a !important;
+  background: rgb(26, 26, 26) !important;
+  background-color: rgb(26, 26, 26) !important;
 }
 
 /* More aggressive iframe background forcing */
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
-  background: #1a1a1a !important;
-  background-color: #1a1a1a !important;
+  background: rgb(26, 26, 26) !important;
+  background-color: rgb(26, 26, 26) !important;
 }
 
-/* Add dark background behind the iframe */
+/* Add dark background behind and over the iframe to force background color */
 [data-theme="dark"] #disqus_thread::before,
 .theme-dark #disqus_thread::before {
   content: "";
@@ -595,6 +596,21 @@ html.theme-dark {
   bottom: 0;
   background: #1a1a1a !important;
   z-index: -1;
+}
+
+/* Additional overlay approach to force background */
+[data-theme="dark"] #disqus_thread::after,
+.theme-dark #disqus_thread::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1a1a1a !important;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Make sure the thread container has relative positioning */
