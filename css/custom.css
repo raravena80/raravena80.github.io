@@ -523,6 +523,18 @@ html.theme-dark {
   padding: 20px 30px !important;
 }
 
+/* Dark mode: match main page background */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
+  background-color: #1a1a1a !important;
+}
+
+/* Light mode: keep transparent */
+[data-theme="light"] .disqus-comments,
+.theme-light .disqus-comments {
+  background: transparent !important;
+}
+
 /* Responsive padding for larger screens */
 @media (min-width: 768px) {
   .disqus-comments {
