@@ -542,32 +542,6 @@ html.theme-dark {
   box-shadow: inset 0 1px 3px rgba(0,0,0,0.3) !important;
 }
 
-/* Apply filters to make Disqus content lighter and more readable */
-[data-theme="dark"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe {
-  background-color: #2d3748 !important;
-  filter: invert(1) hue-rotate(180deg) contrast(0.9) brightness(1.1) !important;
-}
-
-/* Counter-invert images to prevent them from looking weird */
-[data-theme="dark"] #disqus_thread iframe img,
-[data-theme="dark"] #disqus_thread iframe [style*="background-image"],
-.theme-dark #disqus_thread iframe img,
-.theme-dark #disqus_thread iframe [style*="background-image"] {
-  filter: invert(1) hue-rotate(180deg) !important;
-}
-
-/* Alternative approach: lighten all text content */
-[data-theme="dark"] #disqus_thread,
-.theme-dark #disqus_thread {
-  color: #e2e8f0 !important;
-}
-
-[data-theme="dark"] #disqus_thread *,
-.theme-dark #disqus_thread * {
-  color: #e2e8f0 !important;
-}
-
 /* Light mode pager styling */
 [data-theme="light"] .pager li > a,
 [data-theme="light"] .blog-pager li > a,
