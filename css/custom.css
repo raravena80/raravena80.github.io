@@ -66,7 +66,7 @@ html.theme-dark {
 }
 
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
+  --bg-color: rgb(42, 42, 42);
   --text-color: #e2e8f0;
   --link-color: #4dabf7;
 }
@@ -366,7 +366,7 @@ html.theme-dark {
 /* Main content and body elements */
 [data-theme="dark"] body,
 .theme-dark body {
-  background-color: #1a1a1a !important;
+  background-color: rgb(42, 42, 42) !important;
   color: #e2e8f0 !important;
 }
 
@@ -384,7 +384,7 @@ html.theme-dark {
 .theme-dark .article,
 .theme-dark .post,
 .theme-dark .post-content {
-  background-color: #1a1a1a !important;
+  background-color: rgb(42, 42, 42) !important;
   color: #e2e8f0 !important;
 }
 
@@ -526,7 +526,7 @@ html.theme-dark {
 /* Dark mode: match main page background */
 [data-theme="dark"] .disqus-comments,
 .theme-dark .disqus-comments {
-  background-color: #1a1a1a !important;
+  background-color: rgb(42, 42, 42) !important;
 }
 
 /* Light mode: keep transparent */
@@ -565,8 +565,8 @@ html.theme-dark {
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
   filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
-  background: rgb(26, 26, 26) !important;
-  background-color: rgb(26, 26, 26) !important;
+  background: rgb(42, 42, 42) !important;
+  background-color: rgb(42, 42, 42) !important;
 }
 
 /* Force dark background for all Disqus elements in dark mode */
@@ -574,18 +574,18 @@ html.theme-dark {
 [data-theme="dark"] .disqus-comments,
 .theme-dark #disqus_thread,
 .theme-dark .disqus-comments {
-  background: rgb(26, 26, 26) !important;
-  background-color: rgb(26, 26, 26) !important;
+  background: rgb(42, 42, 42) !important;
+  background-color: rgb(42, 42, 42) !important;
 }
 
 /* More aggressive iframe background forcing */
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
-  background: rgb(26, 26, 26) !important;
-  background-color: rgb(26, 26, 26) !important;
+  background: rgb(42, 42, 42) !important;
+  background-color: rgb(42, 42, 42) !important;
 }
 
-/* Add dark background behind and over the iframe to force background color */
+/* Add dark background behind the iframe */
 [data-theme="dark"] #disqus_thread::before,
 .theme-dark #disqus_thread::before {
   content: "";
@@ -594,23 +594,8 @@ html.theme-dark {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #1a1a1a !important;
+  background: rgb(42, 42, 42) !important;
   z-index: -1;
-}
-
-/* Additional overlay approach to force background */
-[data-theme="dark"] #disqus_thread::after,
-.theme-dark #disqus_thread::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #1a1a1a !important;
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  z-index: 1;
 }
 
 /* Make sure the thread container has relative positioning */
