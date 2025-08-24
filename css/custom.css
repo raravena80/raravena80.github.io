@@ -565,13 +565,42 @@ html.theme-dark {
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
   filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
+  background: #1a1a1a !important;
+}
+
+/* Force dark background for all Disqus elements in dark mode */
+[data-theme="dark"] #disqus_thread,
+[data-theme="dark"] .disqus-comments,
+.theme-dark #disqus_thread,
+.theme-dark .disqus-comments {
+  background: #1a1a1a !important;
   background-color: #1a1a1a !important;
 }
 
-/* Force dark background for the iframe container in dark mode */
+/* More aggressive iframe background forcing */
+[data-theme="dark"] #disqus_thread iframe,
+.theme-dark #disqus_thread iframe {
+  background: #1a1a1a !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Add dark background behind the iframe */
+[data-theme="dark"] #disqus_thread::before,
+.theme-dark #disqus_thread::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1a1a1a !important;
+  z-index: -1;
+}
+
+/* Make sure the thread container has relative positioning */
 [data-theme="dark"] #disqus_thread,
 .theme-dark #disqus_thread {
-  background-color: #1a1a1a !important;
+  position: relative;
 }
 
 /* Ensure light mode has no filter and transparent background */
