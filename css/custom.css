@@ -515,11 +515,25 @@ html.theme-dark {
   }
 }
 
-/* Simplified Disqus styling - no external padding, no filters */
+/* Disqus parent container styling - add padding as recommended by Disqus docs */
 .disqus-comments {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  padding: 20px 30px !important;
+}
+
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+  .disqus-comments {
+    padding: 30px 50px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .disqus-comments {
+    padding: 40px 80px !important;
+  }
 }
 
 /* Simple Disqus iframe width fix */
@@ -531,6 +545,8 @@ html.theme-dark {
 /* Let Disqus handle its own styling and spacing */
 #disqus_thread {
   background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Light mode pager styling */
