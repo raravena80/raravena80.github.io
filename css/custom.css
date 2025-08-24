@@ -549,21 +549,15 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* Fallback: CSS-based dark mode if Disqus API doesn't work */
+/* CSS-based dark mode since Disqus API doesn't support dark theme */
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
-  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) brightness(1.1) !important;
+  filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
 }
 
-/* Hide the fallback filter initially, show only if needed */
-[data-theme="dark"] .disqus-comments[data-fallback-theme="true"] #disqus_thread iframe,
-.theme-dark .disqus-comments[data-fallback-theme="true"] #disqus_thread iframe {
-  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) brightness(1.1) !important;
-}
-
-/* Normal state - no filter */
-[data-theme="dark"] .disqus-comments:not([data-fallback-theme="true"]) #disqus_thread iframe,
-.theme-dark .disqus-comments:not([data-fallback-theme="true"]) #disqus_thread iframe {
+/* Ensure light mode has no filter */
+[data-theme="light"] #disqus_thread iframe,
+.theme-light #disqus_thread iframe {
   filter: none !important;
 }
 
