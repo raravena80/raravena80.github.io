@@ -565,12 +565,25 @@ html.theme-dark {
 [data-theme="dark"] #disqus_thread iframe,
 .theme-dark #disqus_thread iframe {
   filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
+  background-color: #1a1a1a !important;
 }
 
-/* Ensure light mode has no filter */
+/* Force dark background for the iframe container in dark mode */
+[data-theme="dark"] #disqus_thread,
+.theme-dark #disqus_thread {
+  background-color: #1a1a1a !important;
+}
+
+/* Ensure light mode has no filter and transparent background */
 [data-theme="light"] #disqus_thread iframe,
 .theme-light #disqus_thread iframe {
   filter: none !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] #disqus_thread,
+.theme-light #disqus_thread {
+  background-color: transparent !important;
 }
 
 /* Light mode pager styling */
