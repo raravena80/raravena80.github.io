@@ -549,6 +549,24 @@ html.theme-dark {
   padding: 0 !important;
 }
 
+/* Fallback: CSS-based dark mode if Disqus API doesn't work */
+[data-theme="dark"] #disqus_thread iframe,
+.theme-dark #disqus_thread iframe {
+  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) brightness(1.1) !important;
+}
+
+/* Hide the fallback filter initially, show only if needed */
+[data-theme="dark"] .disqus-comments[data-fallback-theme="true"] #disqus_thread iframe,
+.theme-dark .disqus-comments[data-fallback-theme="true"] #disqus_thread iframe {
+  filter: invert(0.9) hue-rotate(180deg) contrast(0.9) brightness(1.1) !important;
+}
+
+/* Normal state - no filter */
+[data-theme="dark"] .disqus-comments:not([data-fallback-theme="true"]) #disqus_thread iframe,
+.theme-dark .disqus-comments:not([data-fallback-theme="true"]) #disqus_thread iframe {
+  filter: none !important;
+}
+
 /* Light mode pager styling */
 [data-theme="light"] .pager li > a,
 [data-theme="light"] .blog-pager li > a,
