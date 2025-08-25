@@ -561,20 +561,28 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* Simple Disqus container styling */
-.disqus-comments {
+/* Force white background for Disqus comments container */
+.disqus-comments .comments {
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+}
+
+/* Add subtle shadow and border in dark mode */
+[data-theme="dark"] .disqus-comments .comments,
+.theme-dark .disqus-comments .comments {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #444 !important;
+}
+
+/* Also target the disqus-comments wrapper */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
   background: transparent !important;
 }
 
-/* CSS filter approach for dark mode - more gentle filter */
-[data-theme="dark"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe {
-  filter: invert(1) hue-rotate(180deg) !important;
-}
-
-/* No filter for light mode */
-[data-theme="light"] #disqus_thread iframe,
-.theme-light #disqus_thread iframe {
+/* No filters anywhere */
+#disqus_thread iframe {
   filter: none !important;
 }
 
