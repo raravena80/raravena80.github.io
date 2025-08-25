@@ -561,23 +561,19 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* Set text color for Disqus auto-detection */
-[data-theme="dark"] .disqus-comments,
-.theme-dark .disqus-comments {
+/* Simple Disqus container styling */
+.disqus-comments {
   background: transparent !important;
-  color: #ffffff !important; /* White text triggers dark mode */
 }
 
-[data-theme="light"] .disqus-comments,
-.theme-light .disqus-comments {
-  background: transparent !important;
-  color: #000000 !important; /* Black text triggers light mode */
-}
-
-/* No filters or effects - let Disqus be Disqus */
+/* CSS filter approach for dark mode - more gentle filter */
 [data-theme="dark"] #disqus_thread iframe,
+.theme-dark #disqus_thread iframe {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* No filter for light mode */
 [data-theme="light"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe,
 .theme-light #disqus_thread iframe {
   filter: none !important;
 }
