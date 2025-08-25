@@ -561,28 +561,23 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* Disqus theme detection via inherited text color */
+/* Disqus styling with CSS filter for dark mode */
 [data-theme="dark"] #disqus_thread,
 [data-theme="dark"] .disqus-comments,
 .theme-dark #disqus_thread,
 .theme-dark .disqus-comments {
   background: rgb(42, 42, 42) !important;
   background-color: rgb(42, 42, 42) !important;
-  color: #ffffff !important; /* Light text color for dark mode detection */
 }
 
-/* Ensure light mode has dark text for proper detection */
-[data-theme="light"] #disqus_thread,
-[data-theme="light"] .disqus-comments,
-.theme-light #disqus_thread,
-.theme-light .disqus-comments {
-  color: #000000 !important; /* Dark text color for light mode detection */
-}
-
-/* Let Disqus handle its own theming completely - no filters */
+/* CSS filter for dark mode */
 [data-theme="dark"] #disqus_thread iframe,
+.theme-dark #disqus_thread iframe {
+  filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
+}
+
+/* No filter for light mode */
 [data-theme="light"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe,
 .theme-light #disqus_thread iframe {
   filter: none !important;
 }
