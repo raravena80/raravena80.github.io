@@ -561,44 +561,25 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* Disqus styling with CSS filter for dark mode */
-[data-theme="dark"] #disqus_thread,
+/* Simple Disqus styling - let it handle its own colors */
 [data-theme="dark"] .disqus-comments,
-.theme-dark #disqus_thread,
-.theme-dark .disqus-comments {
-  background: rgb(42, 42, 42) !important;
-  background-color: rgb(42, 42, 42) !important;
+[data-theme="light"] .disqus-comments,
+.theme-dark .disqus-comments,
+.theme-light .disqus-comments {
+  background: transparent !important;
 }
 
-/* CSS filter for dark mode */
+/* No filters or effects - let Disqus be Disqus */
 [data-theme="dark"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe {
-  filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
-}
-
-/* No filter for light mode */
 [data-theme="light"] #disqus_thread iframe,
+.theme-dark #disqus_thread iframe,
 .theme-light #disqus_thread iframe {
   filter: none !important;
 }
 
-/* Add dark background behind the iframe */
-[data-theme="dark"] #disqus_thread::before,
-.theme-dark #disqus_thread::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(42, 42, 42) !important;
-  z-index: -1;
-}
-
-/* Make sure the thread container has relative positioning */
-[data-theme="dark"] #disqus_thread,
-.theme-dark #disqus_thread {
-  position: relative;
+/* Clean styling - let Disqus handle everything */
+#disqus_thread {
+  background: transparent !important;
 }
 
 /* Ensure light mode has no filter and transparent background */
