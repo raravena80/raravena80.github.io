@@ -1,0 +1,510 @@
+/* Resume Styles */
+.resume-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resume-header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.resume-header p {
+  color: white;
+  font-size: 1.1em;
+}
+
+.resume-header a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.resume-header a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* General Resume Styling */
+.content h2 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 40px 0 25px 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.content h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.content h3 {
+  color: #2c3e50;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 25px 0 10px 0;
+}
+
+.content strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.content em {
+  color: #777;
+  font-style: italic;
+}
+
+/* Experience section styling */
+.content h3 + p strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.content hr {
+  margin: 40px 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1px;
+}
+
+/* Key Achievements styling */
+.content h2 + p {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+  margin: 20px 0;
+}
+
+/* Enhanced job titles */
+.content h3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Company names styling */
+.content h3 + p strong {
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+/* Skills section enhancement */
+.content p strong {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  margin: 2px;
+}
+
+/* Header Section */
+.resume-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resume-name {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.resume-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Resume Sections */
+.resume-section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  color: #2c3e50;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0 0 25px 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.section-content {
+  color: #555;
+}
+
+/* Experience Items */
+.experience-item {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.job-title {
+  color: #2c3e50;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.job-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.company {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.duration {
+  color: #777;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.job-description ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.job-description li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.skill-category h4 {
+  color: #2c3e50;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Education */
+.education-item {
+  border-left: 4px solid #667eea;
+  padding-left: 20px;
+}
+
+.degree {
+  color: #2c3e50;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.education-meta {
+  display: flex;
+  gap: 20px;
+  color: #777;
+}
+
+.school {
+  font-weight: 500;
+  color: #667eea;
+}
+
+/* Community Grid */
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.community-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.community-item h4 {
+  color: #2c3e50;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.community-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.community-item li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.community-item strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Speaking List */
+.speaking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.speaking-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+.speaking-list li:last-child {
+  border-bottom: none;
+}
+
+.speaking-list li strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.conference-group h4 {
+  color: #2c3e50;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+/* Education additions */
+.thesis-info {
+  margin: 10px 0 0 0;
+  font-style: italic;
+  color: #666;
+  padding-left: 20px;
+}
+
+/* Job meta location styling */
+.location {
+  color: #888;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 10px;
+  }
+  
+  .resume-header {
+    padding: 30px 15px;
+  }
+  
+  .resume-name {
+    font-size: 2em;
+  }
+  
+  .resume-contact {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+  
+  .resume-section {
+    padding: 20px;
+  }
+  
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .job-meta {
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-name {
+    font-size: 1.8em;
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+  }
+  
+  .job-title {
+    font-size: 1.2em;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .resume-container {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .resume-header {
+    background: #f8f9fa !important;
+    color: #333 !important;
+    box-shadow: none;
+  }
+  
+  .resume-name {
+    text-shadow: none;
+  }
+  
+  .contact-item a {
+    color: #333 !important;
+  }
+  
+  .resume-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    break-inside: avoid;
+  }
+  
+  .resume-section:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .skill-tag {
+    background: #f8f9fa !important;
+    color: #333 !important;
+    border: 1px solid #ddd;
+  }
+}
